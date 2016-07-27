@@ -16,5 +16,7 @@ public class Random_Gen{
   {
     return intR;
   }
+  
+  
 
   }
