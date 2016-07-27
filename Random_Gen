@@ -1,18 +1,22 @@
 import java.util.Random;
 
+
 public class Random_Gen{
 
 
-  public int generarNumero(){
-    int contador = 3000;
-
-    while (contador != 0){
+  public void generarNumero()
+  {
       Random numeroR = new Random();
 
       int intR = numeroR.nextInt(10);
       System.out.print(intR);
-      contador--;
-    }
+  }
+
+  public int getRandom()
+  {
+    return intR;
+  }
 
   }
-}
+
+
