@@ -9,7 +9,6 @@ public class Random_Gen{
       Random numeroR = new Random();
 
       int intR = numeroR.nextInt(10);
-      System.out.print(intR);
   }
 
   public int getRandom()
