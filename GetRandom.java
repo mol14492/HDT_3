@@ -4,8 +4,6 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
-
-
 /**
  * 
  */
@@ -78,12 +76,9 @@ public class GetRandom implements I_random
 		    String[] tempsArray = temps.toArray(new String[0]);
 
 		    for (String s : tempsArray) {
-		      System.out.println(s);
+		     //System.out.println(s);
 		      
-		      //System.out.println(Arrays.toString(tempsArray));
 		    }
 		  }
 		
 	  }
-
-
