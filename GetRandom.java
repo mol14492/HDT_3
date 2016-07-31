@@ -4,6 +4,8 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
+
+
 /**
  * 
  */
@@ -16,69 +18,72 @@ public class GetRandom implements I_random
 {
 
 	/**
-	 * 
+	 * Metodo constructor
 	 */
 	public GetRandom() {
 		// TODO Auto-generated constructor stub
 	}
-
+	// Se genera el numero random.
 	@Override 
 	public int getRandom()
 	  {
 		  int numero;
           Random random = new Random();
-          numero = random.nextInt(10);
-	      return numero;
+          numero = random.nextInt(10);// numero random menor que 10
+	      return numero;// regresa un entero.
 	  }
+	//Crea Archivo de texto
 	@Override
 	  public void crearTxt()
 	  {
-		  GetRandom numeroR = new GetRandom();
+		  GetRandom numeroR = new GetRandom();//crea numeroR de tipo GetRandom.
 			
-		  File out = new File("file.txt");
+		  File out = new File("file.txt");//Se crea archivo de texto.
 	        FileWriter fw = null;
-	        int cont = 3000;
+	        int cont = 3000;//contador 3000
 	        try {
 	            fw = new FileWriter(out);
-	            BufferedWriter writer = new BufferedWriter(fw);
+	            BufferedWriter writer = new BufferedWriter(fw);// Buffer para escribir en el archivo
 	            while (cont > 0) {
-					int intR = numeroR.getRandom();
-					String linea = Integer.toString(intR);
-	                writer.write(linea);
-	                writer.newLine();
-	                cont--;
+					int intR = numeroR.getRandom();//genera numero random
+					String linea = Integer.toString(intR);//numero random a String
+	                writer.write(linea);//escribe el numero en el archivo
+	                writer.newLine();//crea una nueva linea por debajo
+	                cont--;//resta uno al contador
 	            }
-	            writer.close();
+	            writer.close();//se cierra el archivo.
 	        } catch (IOException e) {
 	            e.printStackTrace();
 	            System.exit(0);
 	        }
 	  }
-	@Override
-	 public void guardarArray(){
+	public String[] guardarArray(){
 
 		    String token1 = "";
 		    Scanner file1=null;
 			try {
-			file1 = new Scanner(new File("file.txt")).useDelimiter(",\\s*");
+			file1 = new Scanner(new File("file.txt")).useDelimiter(",\\s*");// se abre el archivo
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		    List<String> temps = new ArrayList<String>();
-		    while (file1.hasNext()) {
+		    List<String> temps = new ArrayList<String>();// se crea un arraylist
+		    while (file1.hasNext()) {//mientras haya algoq que leer.
 
-		      token1 = file1.next();
-		      temps.add(token1);
+		      token1 = file1.next(); //el token apunta al primer numero
+		      temps.add(token1);// se agrega la lista el numero 
 		    }
-		    file1.close();
+		    file1.close();// se cierra el archivo.
 
-		    String[] tempsArray = temps.toArray(new String[0]);
+		    String[] tempsArray = temps.toArray(new String[0]); //se crea un array de la lista temps
 
 		    for (String s : tempsArray) {
 		     //System.out.println(s);
-		      
+		     
 		    }
+			return tempsArray;// regresa el array de strings con los numeros.
+		    
 		  }
 		
 	  }
+
