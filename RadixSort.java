@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 /**
- * @@ codigo radixSort basado en:
+ * @@ codigo radixSort:
  * 
- * http://www.sanfoundry.com/java-program-implement-radix-sort/
+ * S.A.2011.s.f."Java Program to Implement Radix Sort".http://www.sanfoundry.com/java-program-implement-radix-sort/[28 julio 2016]
  *  
  */
 public class RadixSort {
