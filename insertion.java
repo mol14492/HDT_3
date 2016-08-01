@@ -13,6 +13,6 @@ public class InsertionSort {
             // insert the element
             intarray[j] = next;
         }
-        return list;
+        return intarray;
     }
 }
