@@ -3,6 +3,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.*;
 
 
@@ -93,4 +94,25 @@ public class GetRandom implements I_random
 		    }
 			return tempsArray;// regresa el array de strings con los numeros. 
 		  }
+		  
+		   public void crearTxtn(int[] a, String nombre)
+	  {	
+		 try
+		 {
+		     PrintWriter pr = new PrintWriter(nombre);    
+
+		     for (int i=0; i<3000 ; i++)
+		     {
+		         pr.println(a[i]);
+		     }
+		     pr.close();
+		 }
+		 catch (Exception e)
+		 {
+		     e.printStackTrace();
+		     System.out.println("No existe el archivo.");
+		 }
+		 
 	  }
+	  }
+
