@@ -19,7 +19,7 @@ public class Main {
 			
 			
 			try
-				{
+			{
 			
 				FileInputStream archStream  = new FileInputStream("file.txt");
 				// Creamos el objeto de entrada
