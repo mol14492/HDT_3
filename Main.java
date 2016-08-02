@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.io.*;
 
-public class main 
+public class Main 
 {
 
 
@@ -59,7 +59,13 @@ public class main
 			GetRandom nuevo = new GetRandom();
 			String nombre="Ordenados_Radix.txt";
 			nuevo.crearTxtn(intArray,nombre);
-				
+			
+			// codigo Salvador
+			InsertionSort inse = new InsertionSort();
+			inse.insertionSort(intArray);
+			String nombre2 = "Ordenados_Insertion.txt";
+			nuevo.crearTxtn(intArray, nombre2);
+			
 			System.out.println("   *Archivo Ordenados_Radix.txt creado!...");	
 			System.out.println("   *Elementos generados satisfactoriamente en la direccion de raiz de clases\n    saliendo a consola.....");
 		
