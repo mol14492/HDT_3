@@ -87,7 +87,11 @@ public class GetRandom implements I_random
 
 		    String[] tempsArray = temps.toArray(new String[0]); //se crea un array de la lista temps
 
-		
+		    for (String s : tempsArray) 
+			{
+		     //System.out.println(s);
+		     
+		    }
 			return tempsArray;// regresa el array de strings con los numeros. 
 		  }
 		  
@@ -111,5 +115,3 @@ public class GetRandom implements I_random
 		 
 	  }
 	  }
-
-
